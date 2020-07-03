@@ -1,7 +1,7 @@
-<section class="property-binding">
-  <!-- <article> -->
-  <!-- <h3>Intepolação</h3> -->
-  <!-- <p>String renderizada por interpolação: {{ url }}</p>
+<!-- <section class="property-binding"> -->
+<!-- <article> -->
+<!-- <h3>Intepolação</h3> -->
+<!-- <p>String renderizada por interpolação: {{ url }}</p>
     <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
     <p>Resultado de 1 + 1 não é: {{ 1 + 1 + getValor() }}</p>
     <p>
@@ -15,7 +15,7 @@
     <img bind-src="urlImagem" />
   </article> -->
 
-  <article>
+<!-- <article>
     <h3>Class e Style Binding</h3>
     <div>
       Selecione uma Classe:
@@ -66,6 +66,36 @@
       >
         Esse texto so aparece em caso de Erro
       </div>
+    </div>
+  </article> -->
+
+<!-- </section> -->
+
+<section class="event-binding">
+  <article>
+    <h3>Event Binding</h3>
+    <div>
+      <button class="btn btn-primary" (click)="botaoClicado()">
+        Me clique!
+      </button>
+      <br />
+      <input
+        type="text"
+        (keyup)="onKeyUp($event)"
+        (keyup.enter)="salvarValor(campoInput.value)"
+        (blur)="salvarValor(campoInput.value)"
+        #campoInput
+      />
+      <p>Valor atual é:{{ valorAtual }}</p>
+      <p>Valor salvo é:{{ valorSalvo }}</p>
+      <br />
+      <span
+        (mouseover)="onMouseOverOut()"
+        (mouseout)="onMouseOverOut()"
+        [class.highlight]="isMouseOver"
+      >
+        Passe o mouse sobre mim</span
+      >
     </div>
   </article>
 </section>
