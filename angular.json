@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "data-binding"
+    }
+  },
+  "defaultProject": "data-binding",
+  "cli": {
+    "analytics": "b59beaaf-f5da-48a1-bb2d-9b1fbf0886ed"
+  }
 }
