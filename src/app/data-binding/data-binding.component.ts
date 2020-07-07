@@ -15,6 +15,7 @@ export class DataBindingComponent implements OnInit {
   nome: string = 'abc';
   pessoa: any = { nome: 'def', idade: 20 };
   nomeDoCurso: string = 'Angular';
+
   getValor() {
     return +1;
   }
@@ -37,7 +38,9 @@ export class DataBindingComponent implements OnInit {
   onMouseOverOut() {
     this.isMouseOver = !this.isMouseOver;
   }
-
+  onMudouValor(evento) {
+    console.log(evento.novoValor);
+  }
   constructor() {}
 
   ngOnInit(): void {}
